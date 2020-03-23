@@ -2,17 +2,29 @@
 
 ## Summary
 
-- Knowlage
-- Apllication structure
-
-* Split view to components
-* Create components with TDD
-* NGINX Implemtation with Axios
-* CI/CD
+## Knowlage
 
 ```
 npx create-react-app my-app --template typescript
 ```
+
+- Split component
+
+```
+name
+  ├── name.style.css
+  ├── name.view.js
+  ├── name.hook.js
+  ├── name.container.js
+  ├── name.template.js
+  ├── name.store.js
+  ├── name.injection.js
+  ├── name.type.js
+  ├── name.test.js
+  └── index.js
+```
+
+- Create components with TDD
 
 so now we can add our coverage script to package.json
 
@@ -31,6 +43,12 @@ so now we can add our coverage script to package.json
 }
 ```
 
+- NGINX Implemtation with Axios
+
+# CI/CD
+
+- Apllication structure
+
 ```
 my-app
 ├── build
@@ -40,7 +58,7 @@ my-app
 │ ├── index.html
 │ ├── manifest.json
 │ └── images
-│ └── ...
+│   └── ...
 ├── src
 │ ├── components
 │ │ └── ...
@@ -58,18 +76,4 @@ my-app
 ├── package.json
 ├── tsconfig.json
 └── README.md
-```
-
-```
-name
-  ├── name.style.css
-  ├── name.view.js
-  ├── name.hook.js
-  ├── name.container.js
-  ├── name.template.js
-  ├── name.store.js
-  ├── name.injection.js
-  ├── name.type.js
-  ├── name.test.js
-  └── index.js
 ```
