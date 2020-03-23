@@ -11,7 +11,7 @@
 * CI/CD
 
 ```console
-$ npx create-react-app my-app --template typescript
+foo@bar:~$ npx create-react-app my-app --template typescript
 ```
 
 ```
