@@ -10,7 +10,9 @@
 * NGINX Implemtation with Axios
 * CI/CD
 
+```shell
 npx create-react-app my-app --template typescript
+```
 
 ```
 my-app
