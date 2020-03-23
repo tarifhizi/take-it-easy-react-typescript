@@ -1,5 +1,7 @@
 # GuideLine front en react typescript app
 
+<details>
+  <summary>Click to expand!</summary>
 ## Summary
 
 - Knowlage
@@ -9,32 +11,13 @@
 * Create components with TDD
 * NGINX Implemtation with Axios
 * CI/CD
+  </details>
 
-```console
-foo@bar:~$ npx create-react-app my-app --template typescript
+```
+npx create-react-app my-app --template typescript
 ```
 
 ```
-my-app
-├── build
-├── node_modules
-├── public
-│ ├── favicon.ico
-│ ├── index.html
-│ └── manifest.json
-├── src
-│ ├── App.css
-│ ├── App.js
-│ ├── App.test.js
-│ ├── index.css
-│ ├── index.js
-│ ├── logo.svg
-│ └── serviceWorker.js
-├── .gitignore
-├── package.json
-└── README.md
-```
-
 my-app
 ├── build
 ├── node_modules
@@ -72,3 +55,4 @@ my-app
 ├── package.json
 ├── tsconfig.json
 └── README.md
+```
