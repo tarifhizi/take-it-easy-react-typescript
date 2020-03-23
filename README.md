@@ -17,14 +17,18 @@ npx create-react-app my-app --template typescript
 so now we can add our coverage script to package.json
 
 ```json
-"jest": {
+{
+  "scripts": {
+    "test:coverage": "react-scripts test --coverage"
+  },
+  "jest": {
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/node_modules/**",
       "!**/vendor/**"
     ]
   }
-
+}
 ```
 
 ```
