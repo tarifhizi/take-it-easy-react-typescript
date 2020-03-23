@@ -12,6 +12,7 @@
 
 npx create-react-app my-app --template typescript
 
+```
 my-app
 ├── build
 ├── node_modules
@@ -30,6 +31,7 @@ my-app
 ├── .gitignore
 ├── package.json
 └── README.md
+```
 
 my-app
 ├── build
