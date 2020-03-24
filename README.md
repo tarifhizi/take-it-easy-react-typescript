@@ -47,7 +47,7 @@ For Coverage Tests
 there is two way today to create a react component, by using a Class or a Function.
 in this gudeline we will use Functions
 
-### split component to differnt folders
+### split your code
 
 to create a component, we need to handle datas, views, actions, enents , typescript definitions, styles, tests ... this is why it will be a good idea to split our code to different files. and then we add an index witch will export for us the final component.
 
@@ -72,14 +72,14 @@ name
 
 ### Steps to create a component (TDD)
 
-1- guive a name to your component: the name you give to the components, should be clear and unique in the application, in order to make them being easier to find and to avoid possible confusions. To name the components, follow the pattern path-based-component-naming, accordingly to its relative path. For exemple, a component that is located at: components/users/list.container.tsx would be named as UsersListContainer.
+- guive a name to your component: should be clear and unique in the application, in order to make them being easier to find and to avoid possible confusions. To name the components, follow the pattern path-based-component-naming, accordingly to its relative path. For exemple, a component that is located at: components/users/list.container.tsx would be named as UsersListContainer.
 
 this will:
 
 - Facilitate the search for the file inside the project
 - Avoid repeating names on the imports
 
-2-
+* we will create our test file under ./src/components/name/name.test.tsx. the test file is very important, it will guide our code.
 
 - Apllication structure
 
