@@ -40,7 +40,7 @@ For Coverage Tests
 }
 ```
 
-## How to split Views to components
+## How to split UI to components
 
 ## Create a ReactJS Component.
 
@@ -51,7 +51,7 @@ in this gudeline we will use Functions
 
 to create a component, we need to handle datas, views, actions, enents , typescript definitions, styles, tests ... this is why it will be a good idea to split our code to different files. and then we add an index witch will export for us the final component.
 
-this is an exemple of component structure
+#### exemple of component structure
 
 ```
 name
@@ -67,7 +67,19 @@ name
   └── index.js
 ```
 
-you are free to use other names like view instead of component , interface in place of type. the important is to use a name that match with the content.
+- you are free to use other names like view instead of component , interface in place of type. the important is to use a name that match with the content.
+- you can use capital letters to name the files,(Name in place of name) but remember that Capital letters we most use theme only to name Classes and instances of react components not the file,
+
+### Steps to create a component (TDD)
+
+1- guive a name to your component: the name you give to the components, should be clear and unique in the application, in order to make them being easier to find and to avoid possible confusions. To name the components, follow the pattern path-based-component-naming, accordingly to its relative path. For exemple, a component that is located at: components/users/list.container.tsx would be named as UsersListContainer.
+
+this will:
+
+- Facilitate the search for the file inside the project
+- Avoid repeating names on the imports
+
+2-
 
 - Apllication structure
 
