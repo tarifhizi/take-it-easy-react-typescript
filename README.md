@@ -76,10 +76,10 @@ name
 
 this will:
 
-- Facilitate the search for the file inside the project
-- Avoid repeating names on the imports
+-- Facilitate the search for the file inside the project
+-- Avoid repeating names on the imports
 
-* we will create our test file under ./src/components/name/name.test.tsx. the test file is very important, it will guide our code.
+- we will create our test file under ./src/components/name/name.test.tsx. the test file is very important, it will guide our code.
 
 - Apllication structure
 
