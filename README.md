@@ -74,11 +74,16 @@ name
 
 <center>
 <img src="./public/guideline-exemple.jpg"
-     alt="Guideline Exemple"
-     style="margin: 0 auto; display: block;" />
+     alt="Guideline Exemple"/>
 </center>
+
 Before getting into coding see how you can split your app into multiple smaller components.
-for example :
+React is just about Component modulations, you need to segregate your components in hierarchical format which states parent child relationships.
+
+<center>
+<img src="./public/guideline-exemple-split.jpg"
+     alt="Guideline Exemple Split"/>
+</center>
 
 Guive a name to your component: should be clear and unique in the application, in order to make them being easier to find and to avoid possible confusions. To name the components, follow the pattern path-based-component-naming, accordingly to its relative path. For exemple, a component that is located at: components/users/list.container.tsx would be named as UsersListContainer.
 
