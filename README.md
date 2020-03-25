@@ -68,18 +68,27 @@ name
 ```
 
 - you are free to use other names like view instead of component , interface in place of type. the important is to use a name that match with the content.
-- you can use capital letters to name the files,(Name in place of name) but remember that Capital letters we most use theme only to name Classes and instances of react components not the file,
+- you can use capital letters to name the files,(Name in place of name) but remember that we most use Capital letters to name Classes and instances of react components not the file,
 
 ### Steps to create a component (TDD)
 
-- guive a name to your component: should be clear and unique in the application, in order to make them being easier to find and to avoid possible confusions. To name the components, follow the pattern path-based-component-naming, accordingly to its relative path. For exemple, a component that is located at: components/users/list.container.tsx would be named as UsersListContainer.
+<img src="./public/guideline-exemple.jpg"
+     alt="Guideline Exemple"
+     style="margin: 0 auto; display: block;" />
+
+Before getting into coding see how you can split your app into multiple smaller components.
+for example :
+
+Guive a name to your component: should be clear and unique in the application, in order to make them being easier to find and to avoid possible confusions. To name the components, follow the pattern path-based-component-naming, accordingly to its relative path. For exemple, a component that is located at: components/users/list.container.tsx would be named as UsersListContainer.
 
 this will:
 
--- Facilitate the search for the file inside the project
--- Avoid repeating names on the imports
+- Facilitate the search for the file inside the project
+- Avoid repeating names on the imports
 
-- we will create our test file under ./src/components/name/name.test.tsx. the test file is very important, it will guide our code.
+### Codding
+
+Start with a test file: under ./src/components/name/name.test.tsx. the test file is very important for TDD. we are using Jest with react-testing-library, https://testing-library.com/docs/react-testing-library/intro is a good reference to learn how to code tests.
 
 - Apllication structure
 
