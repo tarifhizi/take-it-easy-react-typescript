@@ -72,10 +72,11 @@ name
 
 ### Steps to create a component (TDD)
 
+<center>
 <img src="./public/guideline-exemple.jpg"
      alt="Guideline Exemple"
      style="margin: 0 auto; display: block;" />
-
+</center>
 Before getting into coding see how you can split your app into multiple smaller components.
 for example :
 
