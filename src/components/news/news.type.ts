@@ -3,12 +3,12 @@ export interface INewsItemImage {
   alt: string;
 }
 export interface INewsItem {
-  img?: INewsItemImage;
+  img: INewsItemImage;
   title: string;
   link: string;
   description: string;
 }
 export interface INews {
-  title: string;
-  news: INewsItem[];
+  title?: string;
+  list: INewsItem[];
 }

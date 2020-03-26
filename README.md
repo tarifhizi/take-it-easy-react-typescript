@@ -76,27 +76,29 @@ Imagine that we already have a JSON API and a mock from our designer.
 
 If we take the News Component the template looks like this:
 
-```javascript
+```typescript
 // /src/components/news/news.template.ts
 
 export default {
   title: "",
-  news: {
-    img: {
-      url: "",
-      alt: ""
-    },
-    title: "",
-    link: "",
-    description: ""
-  }
+  news: [
+    {
+      img: {
+        url: "",
+        alt: ""
+      },
+      title: "",
+      link: "",
+      description: ""
+    }
+  ]
 };
 ```
 
 - Remember to talk with ux and back-end developers so you can have an idea of the data that you will recive
 - You can use json or js, remember this is only a mocked template it can be replaced by a store state or fetched data. or you can keep it as a static data.
 
-### 2- Create typescript types
+### 2- Create typescript interfaces
 
 Using TypeScript allows us to get the benefits of IntelliSense, as well as the ability to further reason about our code. As well as this, adopting TypeScript is easy as files can be incrementally upgraded without causing issues throughout the rest of your project.
 
@@ -109,13 +111,13 @@ export interface INewsItemImage {
   alt: string;
 }
 export interface INewsItem {
-  img?: INewsItemImage;
+  img: INewsItemImage;
   title: string;
   link: string;
   description: string;
 }
 export interface INews {
-  title: string;
+  title?: string;
   news: INewsItem[];
 }
 ```
@@ -129,6 +131,54 @@ Start with a test file: under ./src/components/name/name.test.tsx. the test file
 To write maintainable tests for your component, tests must avoid including implementation details of your component, and rather focus on making tests give you the confidence for which they are intended. As part of this, testbase will be maintainable in the long run.
 
 In our example the test file looks like this:
+
+```typescript
+// /src/components/news/news.test.tsx
+import React from "react";
+import { render, cleanup } from "@testing-library/react";
+import News from "./news.component";
+import NewsCard from "./newsCard.component";
+import news from "./news.template";
+const EMPTY_MESSAGE = "There is no news";
+
+afterEach(cleanup);
+
+describe("<News />", () => {
+  it("should display the title of the news section", () => {
+    const wrap = render(<News title={news.title} list={news.list} />);
+    expect(wrap.getByText(news.title)).toBeTruthy();
+  });
+  it("should display a list of news if available", () => {
+    const wrap = render(<News title={news.title} list={news.list} />);
+    expect(wrap.container.querySelectorAll("li").length).toEqual(
+      news.list.length
+    );
+  });
+  it("should display an empty message  if news is not available", () => {
+    const empty = render(<News list={[]} />);
+    expect(empty.container.querySelectorAll("li").length).toEqual(0);
+    expect(empty.getByText(EMPTY_MESSAGE)).toBeTruthy();
+  });
+  describe("<NewsCard />", () => {
+    it("should contains a read more button with a link to article", () => {
+      const wrap = render(<NewsCard {...news.list[0]} />);
+      expect(wrap.getByText("read more").closest("a")).toHaveAttribute(
+        "href",
+        news.list[0].link
+      );
+    });
+    it("should contains an image, title and description", () => {
+      const wrap = render(<NewsCard {...news.list[0]} />);
+      expect(wrap.container.querySelector("img")).toHaveAttribute(
+        "src",
+        news.list[0].img.url
+      );
+      expect(wrap.getByText(news.list[0].title)).toBeTruthy();
+      expect(wrap.getByText(news.list[0].description)).toBeTruthy();
+    });
+  });
+});
+```
 
 ### Create a ReactJS Component.
 
