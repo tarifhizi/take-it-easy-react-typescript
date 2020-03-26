@@ -125,7 +125,9 @@ export interface INews {
 - use I before evry interface you create.
 - put only types that is relative to news component, if there is a common interface you can put it in src/types/ folder.
 
-### 3- Create a test file
+### 3- Create a test file and components on the same time doing TDD
+
+#### Test file
 
 Start with a test file: under ./src/components/name/name.test.tsx. the test file is very important for TDD. we are using Jest with react-testing-library, https://testing-library.com/docs/react-testing-library/intro is a good reference to learn how to code tests.
 To write maintainable tests for your component, tests must avoid including implementation details of your component, and rather focus on making tests give you the confidence for which they are intended. As part of this, testbase will be maintainable in the long run.
@@ -180,10 +182,60 @@ describe("<News />", () => {
 });
 ```
 
-### Create a ReactJS Component.
+#### Components.
 
-there is two way today to create a react component, by using a Class or a Function.
-in this gudeline we will use Functions
+```typescript
+// /src/components/news/news.component.tsx
+
+import React, { FunctionComponent } from "react";
+import NewsCard from "./newsCard.component";
+import { INews } from "./news.type";
+const NewsComponent: FunctionComponent<INews> = ({ title, list }) => {
+  return (
+    <div>
+      <h2>{title}</h2>
+      <ul data-testid="news-cards"></ul>
+      {list.length > 0 ? (
+        <ul data-testid="news-cards">
+          {list.map((item, index) => (
+            <li key={index}>
+              <NewsCard {...item} />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>There is no news</p>
+      )}
+    </div>
+  );
+};
+
+export default NewsComponent;
+```
+
+```typescript
+// /src/components/news/newsCard.component.tsx
+
+import React, { FunctionComponent } from "react";
+import { INewsItem } from "./news.type";
+const NewsItemComponent: FunctionComponent<INewsItem> = ({
+  title,
+  link,
+  img,
+  description
+}) => {
+  return (
+    <>
+      <img src={img.url} alt={img.alt} />
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <a href={link}>read more</a>
+    </>
+  );
+};
+
+export default NewsItemComponent;
+```
 
 ## Get Started
 
