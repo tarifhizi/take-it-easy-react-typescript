@@ -12,10 +12,12 @@
 
 ## Knowlage
 
-JavaScript
-ReactJs
-TypeScript
-BootStrap
+- HTML,
+- CSS
+- JavaScript
+- ReactJs
+- TypeScript
+- BootStrap
 
 ## How to split UI to components
 
@@ -98,7 +100,7 @@ export default {
 
 Using TypeScript allows us to get the benefits of IntelliSense, as well as the ability to further reason about our code. As well as this, adopting TypeScript is easy as files can be incrementally upgraded without causing issues throughout the rest of your project.
 
-If we take the News Component the template looks like this:
+If we take the News Component the typescript file looks like this:
 
 ```typescript
 // /src/components/news/news.type.ts
@@ -118,9 +120,15 @@ export interface INews {
 }
 ```
 
+- use I before evry interface you create.
+- put only types that is relative to news component, if there is a common interface you can put it in src/types/ folder.
+
 ### 3- Create a test file
 
 Start with a test file: under ./src/components/name/name.test.tsx. the test file is very important for TDD. we are using Jest with react-testing-library, https://testing-library.com/docs/react-testing-library/intro is a good reference to learn how to code tests.
+To write maintainable tests for your component, tests must avoid including implementation details of your component, and rather focus on making tests give you the confidence for which they are intended. As part of this, testbase will be maintainable in the long run.
+
+In our example the test file looks like this:
 
 ### Create a ReactJS Component.
 
@@ -165,6 +173,7 @@ my-app
 ├── src
 │ ├── components
 │ │ └── ...
+│ ├── types
 │ ├── pages
 │ │ └── ...
 │ ├── utils
