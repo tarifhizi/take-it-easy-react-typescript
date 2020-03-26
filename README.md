@@ -23,16 +23,16 @@ Before getting into coding see how you can split your app into multiple smaller 
 React is just about Component modulations, you need to segregate your components in hierarchical format which states parent child relationships.
 
 <figure>
-    <img width="60%" src="./public/guideline-exemple.jpg" alt="Guideline Exemple"/>
-    <figcaption>Guideline Exemple</figcaption>
+  <figcaption>Guideline Exemple</figcaption>
+  <img width="60%" src="./public/guideline-exemple.jpg" alt="Guideline Exemple"/>
 </figure>
 <figure>
-    <img width="60%" src="./public/guideline-exemple-split.jpg" alt="Guideline Exemple Split"/>
-    <figcaption>Guideline Exemple Split</figcaption>
+  <figcaption>Guideline Exemple Split</figcaption>
+  <img width="60%" src="./public/guideline-exemple-split.jpg" alt="Guideline Exemple Split"/>
 </figure>
 <figure>
-    <img width="60%" src="./public/guideline-exemple-components.jpg" alt="Guideline Exemple Components"/>
-    <figcaption>Guideline Exemple Components</figcaption>
+  <figcaption>Guideline Exemple Components</figcaption>
+  <img width="60%" src="./public/guideline-exemple-components.jpg" alt="Guideline Exemple Components"/>
 </figure>
 
 ### Guive a unique name to your component
