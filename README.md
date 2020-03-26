@@ -41,7 +41,7 @@ React is just about Component modulations, you need to segregate your components
 
 in this section we will take the News component as an example.
 
-### Guive a unique name to your component
+### Give a unique name to your component
 
 the name should be clear and unique in the application, in order to make them being easier to find and to avoid possible confusions.
 , follow the pattern path-based-component-naming, accordingly to its relative path. For exemple, a component that is located at: components/parent/child.container.tsx would be named as ParentChildContainer. This will Facilitate the search for the file inside the project and Avoid repeating names on the imports.
