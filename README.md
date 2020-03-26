@@ -20,15 +20,25 @@ BootStrap
 ## How to split UI to components
 
 Before getting into coding see how you can split your app into multiple smaller components.
-React is just about Component modulations, you need to segregate your components in hierarchical format which states parent child relationships. Guive a name to your component: should be clear and unique in the application, in order to make them being easier to find and to avoid possible confusions.
+React is just about Component modulations, you need to segregate your components in hierarchical format which states parent child relationships.
 
-<img width="100" src="./public/guideline-exemple.jpg" alt="Guideline Exemple"/>
-<img width="100" src="./public/guideline-exemple-split.jpg" alt="Guideline Exemple Split"/>
-<img width="100" src="./public/guideline-exemple-components.jpg" alt="Guideline Exemple Components"/>
+<figure>
+    <img width="60%" src="./public/guideline-exemple.jpg" alt="Guideline Exemple"/>
+    <figcaption>Guideline Exemple</figcaption>
+</figure>
+<figure>
+    <img width="60%" src="./public/guideline-exemple-split.jpg" alt="Guideline Exemple Split"/>
+    <figcaption>Guideline Exemple Split</figcaption>
+</figure>
+<figure>
+    <img width="60%" src="./public/guideline-exemple-components.jpg" alt="Guideline Exemple Components"/>
+    <figcaption>Guideline Exemple Components</figcaption>
+</figure>
 
 ### Guive a unique name to your component
 
-To name the components, follow the pattern path-based-component-naming, accordingly to its relative path. For exemple, a component that is located at: components/parent/child.container.tsx would be named as ParentChildContainer. This will Facilitate the search for the file inside the project and Avoid repeating names on the imports.
+the name should be clear and unique in the application, in order to make them being easier to find and to avoid possible confusions.
+, follow the pattern path-based-component-naming, accordingly to its relative path. For exemple, a component that is located at: components/parent/child.container.tsx would be named as ParentChildContainer. This will Facilitate the search for the file inside the project and Avoid repeating names on the imports.
 
 ## Codding
 
