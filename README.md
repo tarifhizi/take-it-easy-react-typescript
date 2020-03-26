@@ -17,35 +17,20 @@ ReactJs
 TypeScript
 BootStrap
 
-## Get Started
-
-```
-npx create-react-app my-app --template typescript
-```
-
-For Coverage Tests
-
-```json
-{
-  "scripts": {
-    "test:coverage": "react-scripts test --coverage"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "**/*.{js,jsx}",
-      "!**/node_modules/**",
-      "!**/vendor/**"
-    ]
-  }
-}
-```
-
 ## How to split UI to components
 
-## Create a ReactJS Component.
+Before getting into coding see how you can split your app into multiple smaller components.
+React is just about Component modulations, you need to segregate your components in hierarchical format which states parent child relationships. Guive a name to your component: should be clear and unique in the application, in order to make them being easier to find and to avoid possible confusions.
 
-there is two way today to create a react component, by using a Class or a Function.
-in this gudeline we will use Functions
+<img width="100" src="./public/guideline-exemple.jpg" alt="Guideline Exemple"/>
+<img width="100" src="./public/guideline-exemple-split.jpg" alt="Guideline Exemple Split"/>
+<img width="100" src="./public/guideline-exemple-components.jpg" alt="Guideline Exemple Components"/>
+
+### Guive a unique name to your component
+
+To name the components, follow the pattern path-based-component-naming, accordingly to its relative path. For exemple, a component that is located at: components/parent/child.container.tsx would be named as ParentChildContainer. This will Facilitate the search for the file inside the project and Avoid repeating names on the imports.
+
+## Codding
 
 ### split your code
 
@@ -70,31 +55,35 @@ name
 - you are free to use other names like view instead of component , interface in place of type. the important is to use a name that match with the content.
 - you can use capital letters to name the files,(Name in place of name) but remember that we most use Capital letters to name Classes and instances of react components not the file,
 
-### Steps to create a component (TDD)
+## Create a ReactJS Component.
 
-<center>
-<img src="./public/guideline-exemple.jpg"
-     alt="Guideline Exemple"/>
-</center>
-
-Before getting into coding see how you can split your app into multiple smaller components.
-React is just about Component modulations, you need to segregate your components in hierarchical format which states parent child relationships.
-
-<center>
-<img src="./public/guideline-exemple-split.jpg"
-     alt="Guideline Exemple Split"/>
-</center>
-
-Guive a name to your component: should be clear and unique in the application, in order to make them being easier to find and to avoid possible confusions. To name the components, follow the pattern path-based-component-naming, accordingly to its relative path. For exemple, a component that is located at: components/users/list.container.tsx would be named as UsersListContainer.
-
-this will:
-
-- Facilitate the search for the file inside the project
-- Avoid repeating names on the imports
-
-### Codding
+there is two way today to create a react component, by using a Class or a Function.
+in this gudeline we will use Functions
 
 Start with a test file: under ./src/components/name/name.test.tsx. the test file is very important for TDD. we are using Jest with react-testing-library, https://testing-library.com/docs/react-testing-library/intro is a good reference to learn how to code tests.
+
+## Get Started
+
+```
+npx create-react-app my-app --template typescript
+```
+
+For Coverage Tests
+
+```json
+{
+  "scripts": {
+    "test:coverage": "react-scripts test --coverage"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ]
+  }
+}
+```
 
 - Apllication structure
 
