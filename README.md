@@ -67,14 +67,19 @@ name
 - you are free to use other names like view instead of component , interface in place of type. the important is to use a name that match with the content.
 - you can use capital letters to name the files,(Name in place of name) but remember that we most use Capital letters to name Classes and instances of react components not the file,
 
-### Start With A Mock
+### 1- Start With A Mock
 
 One of the many great parts of React is how it makes you think about apps as you build them.
-Imagine that we already have a JSON API and a mock from our designer. If we take the News Component the template looks like this:
+Imagine that we already have a JSON API and a mock from our designer.
+
+If we take the News Component the template looks like this:
 
 ```javascript
-[
-  {
+// /src/components/news/news.template.ts
+
+export default {
+  title: "",
+  news: {
     img: {
       url: "",
       alt: ""
@@ -83,10 +88,37 @@ Imagine that we already have a JSON API and a mock from our designer. If we take
     link: "",
     description: ""
   }
-];
+};
 ```
 
-### Create a test file
+- Remember to talk with ux and back-end developers so you can have an idea of the data that you will recive
+- You can use json or js, remember this is only a mocked template it can be replaced by a store state or fetched data. or you can keep it as a static data.
+
+### 2- Create typescript types
+
+Using TypeScript allows us to get the benefits of IntelliSense, as well as the ability to further reason about our code. As well as this, adopting TypeScript is easy as files can be incrementally upgraded without causing issues throughout the rest of your project.
+
+If we take the News Component the template looks like this:
+
+```typescript
+// /src/components/news/news.type.ts
+export interface INewsItemImage {
+  url: string;
+  alt: string;
+}
+export interface INewsItem {
+  img?: INewsItemImage;
+  title: string;
+  link: string;
+  description: string;
+}
+export interface INews {
+  title: string;
+  news: INewsItem[];
+}
+```
+
+### 3- Create a test file
 
 Start with a test file: under ./src/components/name/name.test.tsx. the test file is very important for TDD. we are using Jest with react-testing-library, https://testing-library.com/docs/react-testing-library/intro is a good reference to learn how to code tests.
 
