@@ -5,9 +5,9 @@ const NewsComponent: FunctionComponent<INews> = ({ title, list }) => {
   return (
     <div>
       <h2>{title}</h2>
-      <ul data-testid="news-cards"></ul>
+
       {list.length > 0 ? (
-        <ul data-testid="news-cards">
+        <ul>
           {list.map((item, index) => (
             <li key={index}>
               <NewsCard {...item} />
